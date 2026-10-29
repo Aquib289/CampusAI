@@ -21,7 +21,15 @@ function AdminDashboardPage() {
   return (
     <div className="admin-page">
       <aside className="admin-sidebar">
-        <a className="admin-brand" href="/admin"><span className="admin-brand-mark">⌂</span><span>CampusQ <b>AI</b></span></a>
+        <a className="admin-brand" href="/admin" aria-label="CampusQ AI admin dashboard">
+          <svg className="admin-brand-mark" viewBox="0 0 48 40" aria-hidden="true">
+            <path d="M2.5 13.1 24 2l21.5 11.1L24 24.2 2.5 13.1Z" fill="currentColor" />
+            <path d="M10 18v8.2c7.7 6.3 20.3 6.3 28 0V18L24 25.3 10 18Z" fill="currentColor" />
+            <path d="M44 14v12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+            <circle cx="44" cy="28.5" r="2" fill="currentColor" />
+          </svg>
+          <span>CampusQ <b>AI</b></span>
+        </a>
         <nav className="admin-nav" aria-label="Admin dashboard">
           {['Dashboard', 'Manage Students', 'Manage Departments', 'Manage Services', 'Manage Appointments', 'Manage Counters', 'Reports & Analytics', 'Notifications', 'Settings'].map((item, index) => (
             <a href={index === 0 ? '/admin' : `#${item.toLowerCase().replaceAll(' ', '-')}`} className={`admin-nav-item${index === 0 ? ' active' : ''}`} key={item}>
@@ -35,7 +43,15 @@ function AdminDashboardPage() {
 
       <main className="admin-main">
         <header className="admin-topbar">
-          <div className="admin-mobile-brand">CampusQ <b>AI</b></div>
+          <a className="admin-mobile-brand" href="/admin" aria-label="CampusQ AI admin dashboard">
+            <svg className="admin-brand-mark" viewBox="0 0 48 40" aria-hidden="true">
+              <path d="M2.5 13.1 24 2l21.5 11.1L24 24.2 2.5 13.1Z" fill="currentColor" />
+              <path d="M10 18v8.2c7.7 6.3 20.3 6.3 28 0V18L24 25.3 10 18Z" fill="currentColor" />
+              <path d="M44 14v12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+              <circle cx="44" cy="28.5" r="2" fill="currentColor" />
+            </svg>
+            <span>CampusQ <b>AI</b></span>
+          </a>
           <button className="admin-bell" aria-label="Notifications">♧<i>3</i></button>
           <div className="admin-profile"><span className="admin-avatar">AD</span><span><strong>Dr. Faisal Ahmed</strong><small>Administrator</small></span></div>
         </header>
