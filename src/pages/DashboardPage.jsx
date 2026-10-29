@@ -6,7 +6,7 @@ const sidebarItems = [
   { label: 'Book Appointment', icon: 'calendar', href: '#book-appointment' },
   { label: 'My Appointments', icon: 'appointments', href: '#appointments' },
   { label: 'Queue Status', icon: 'queue', href: '#queue-status' },
-  { label: 'Notifications', icon: 'bell', href: '#notifications', badge: '3' },
+  { label: 'Notifications', icon: 'bell', href: '/notifications', badge: '3' },
   { label: 'Profile', icon: 'user', href: '#profile' },
 ]
 

@@ -1,4 +1,5 @@
 import './AdminDashboardPage.css'
+import PageHeader from '../components/PageHeader.jsx'
 
 const stats = [
   { label: 'Total Students', value: '1,234', icon: '♙', tone: 'blue', note: '+8.2% this month' },
@@ -58,7 +59,7 @@ function AdminDashboardPage() {
 
         <div className="admin-content">
           <div className="admin-heading-row">
-            <div><p className="admin-eyebrow">CAMPUS OVERVIEW</p><h1>Welcome, Admin!</h1><p className="admin-subtitle">Monitor and manage all college services, appointments and system activity.</p></div>
+            <PageHeader title="Welcome, Admin!" subtitle="Monitor and manage all college services, appointments and system activity." />
             <time className="admin-date">Tuesday, 29 October 2026 <span>10:25 AM</span></time>
           </div>
 
