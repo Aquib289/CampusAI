@@ -14,7 +14,6 @@ function CapMark() {
 
 function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
-  const [accountType, setAccountType] = useState('student')
   const [notice, setNotice] = useState('')
 
   function handleSubmit(event) {
@@ -86,18 +85,17 @@ function LoginPage() {
             </svg>
             Student
           </a>
-          <button
-            className={`role-option role-admin${accountType === 'admin' ? ' is-selected' : ''}`}
-            type="button"
-            aria-pressed={accountType === 'admin'}
-            onClick={() => setAccountType('admin')}
+          <a
+            className="role-option role-admin"
+            href="/admin"
+            aria-label="Open admin dashboard"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 3 5 6v5c0 4.4 2.9 8.4 7 10 4.1-1.6 7-5.6 7-10V6l-7-3Z" />
               <path d="m9 12 2 2 4-4" />
             </svg>
             Admin
-          </button>
+          </a>
         </div>
       </section>
     </main>

@@ -3,6 +3,7 @@ import DashboardPage from './pages/DashboardPage.jsx'
 import LandingPage from './pages/landingPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import RegisterPage from './pages/RegisterPage.jsx'
+import AdminDashboardPage from './pages/AdminDashboardPage.jsx'
 
 function App() {
   const currentPath = window.location.pathname.replace(/\/+$/, '')
@@ -10,6 +11,7 @@ function App() {
   if (currentPath === '/register') return <RegisterPage />
   if (currentPath === '/login') return <LoginPage />
   if (currentPath === '/dashboard') return <DashboardPage />
+  if (currentPath === '/admin') return <AdminDashboardPage />
   return <LandingPage />
 }
 
